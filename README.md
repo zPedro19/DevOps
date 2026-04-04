@@ -1,2 +1,16 @@
-# DevOps
-Repositório utilizado para o meu projeto da matéria de DevOps do curso de análise e desenvolvimento de sistemas (ADS), na instituição da PUCPR
+\# Projeto DevOps - PUCPR
+
+
+
+Projeto simples em Python para demonstrar:
+
+\- Uso de Git e GitHub
+
+\- Branches
+
+\- Pull Requests
+
+\- Integração Contínua (CI)
+
+\- Testes automatizados com Pytest
+
