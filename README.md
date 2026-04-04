@@ -14,3 +14,13 @@ Projeto simples em Python para demonstrar:
 
 \- Testes automatizados com Pytest
 
+
+
+\## Integração Contínua (CI)
+
+
+
+Este projeto utiliza GitHub Actions para executar testes automaticamente
+
+a cada push e pull request.
+
