@@ -8,3 +8,6 @@ def test_soma():
 def test_eh_par():
     assert eh_par(4) is True
     assert eh_par(5) is False
+
+def test_soma_zero():
+    assert soma(0, 0) == 0
