@@ -1,0 +1,22 @@
+name: Continuous Delivery (CD)
+
+on:
+  workflow_run:
+    workflows: ["Continuous Integration (CI)"]
+    types:
+      - completed
+
+jobs:
+  cd:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Preparar aplicação
+        run: |
+          echo "Preparando aplicação para produção"
+          mkdir build
+          echo "Build criado com sucesso" > build/app.txt
