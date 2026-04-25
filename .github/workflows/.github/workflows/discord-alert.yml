@@ -1,0 +1,24 @@
+name: Discord Alert
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send alert to Discord
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_MESSAGE: |
+            🚀 *GitHub Actions Alert*
+            📦 Repositório: ${{ github.repository }}
+            👤 Autor: ${{ github.actor }}
+            🔔 Evento: ${{ github.event_name }}
+            ✅ Status: Workflow executado com sucesso
