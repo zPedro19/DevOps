@@ -14,6 +14,6 @@ jobs:
           curl -H "Content-Type: application/json" \
           -X POST \
           -d '{
-            "content": "GitHub Actions\nRepo: ${{ github.repository }}\nEvento: ${{ github.event_name }}\nAutor: ${{ github.actor }}"
+            "content": "GitHub Actions Alerta\nRepo: ${{ github.repository }}\nEvento: ${{ github.event_name }}\nAutor: ${{ github.actor }}"
           }' \
           ${{ secrets.DISCORD_WEBHOOK }}
