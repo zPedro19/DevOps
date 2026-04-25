@@ -1,5 +1,10 @@
+import sys
+import os
 import pytest
-from src.calculadora import soma, subtracao, multiplicacao, divisao
+
+sys.path.append(os.path.abspath("src"))
+
+from calculadora import soma, subtracao, multiplicacao, divisao
 
 
 def test_soma():
