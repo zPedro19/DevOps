@@ -1,13 +1,28 @@
-from src.calculadora import soma, eh_par
+import sys
+import os
+import pytest
+
+sys.path.append(os.path.abspath("src"))
+
+from calculadora import soma, subtracao, multiplicacao, divisao
 
 
 def test_soma():
     assert soma(2, 3) == 5
 
 
-def test_eh_par():
-    assert eh_par(4) is True
-    assert eh_par(5) is False
+def test_subtracao():
+    assert subtracao(5, 3) == 2
 
-def test_soma_zero():
-    assert soma(0, 0) == 0
+
+def test_multiplicacao():
+    assert multiplicacao(2, 4) == 8
+
+
+def test_divisao():
+    assert divisao(10, 2) == 5
+
+
+def test_divisao_por_zero():
+    with pytest.raises(ZeroDivisionError):
+        divisao(10, 0)
